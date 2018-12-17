@@ -1,0 +1,277 @@
+a {
+  text-decoration: underline;
+  color:white;
+  cursor:pointer;
+}
+
+nav{
+  text-align:center;}
+
+body {
+    background-color: #000;
+    color:#FFF;
+    font-family: sans-serif;
+}
+
+header {
+/*    grid-area: header;*/
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* log in | join links appear at upper-right of header, so float:right */
+#join-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    float: right;
+    background-color: black;
+    min-width: 300px;
+    min-height: 40px;
+    border-radius:5px;
+/*    text-align: right;*/
+}
+#join-login ul{
+    padding: 0;
+}
+
+#join-login a{
+    color:white;
+    
+}
+
+main {
+/*    grid-area: main;*/
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* make the nav links run hoirizontally */
+nav li, footer ul, footer li, #join-login li {
+    display: inline;
+}
+
+#edit-btn {
+    margin: 0 auto;
+    display: block;
+    font-size:1rem; 
+    padding: 3px 45px;
+}
+
+form {
+    text-align: center;
+    padding: 20px;
+    background-color: #DDD;
+    width: 350px;
+    margin: 20px auto;
+    border: 5px solid #888;
+/*    border-radius: 10px;*/
+    overflow-x: scroll;
+}
+
+input {
+    padding: 3px;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    width: 175px;
+    color: #888;
+    border: 2px solid #888;
+}
+
+/* set input type="checkbox" width to override input width */
+.chkbox {
+    width: 20px;
+}
+
+#searchTable {
+    border-radius:10px; 
+    border: 2px solid #FA5F02; 
+}
+
+/* Profile Page */
+#profile-container {
+    width: 80%;
+    min-height: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 1rem;
+    background-color: #DEF;
+    color: #345;
+    border-radius: 20px;
+}
+
+#profile-header {
+    min-height: 50px;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+#profile-pics {
+    width: 35%;
+/*    float: left;*/
+    min-height: 400px;
+    padding: 1%;
+    background-color: #000;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/*
+#profile-details {
+    width: 98%;
+    float: right;
+    min-height: 400px;
+    padding: 1%;
+    background-color: #000;
+    border-radius: 10px;
+    border: 2px solid #FA5F02;
+    margin: 0;
+}
+*/
+
+/* blog main and aside CSS */
+.blog-container {
+    width: 90%;
+    min-height: 550px;
+    padding:1rem;
+    margin: 10px auto;
+    background-color: azure;
+    border: 3px solid cornflowerblue;
+    border-radius: 10px;
+}
+
+.blog-newest-entry {
+    float: left;
+    padding: 1%;
+    width: 70%;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    height: 520px;
+    overflow-y: scroll;
+}
+
+.blog-archive-links {
+    float: right;
+    padding: 1%;
+    width: 24%;
+    background-color: lavenderblush;
+    border-radius: 10px;
+    height: 520px;
+    overflow-y: scroll;
+}
+
+#galleryPicDiv {
+    margin: 10px 0;
+    min-height: 200px; 
+    width: 95%;
+    padding: 10px; 
+    background-color:#000; 
+    border-radius:10px; 
+    border: 2px solid #FA5F02; 
+    overflow-y: scroll;
+}
+
+#galleryPicDiv img {
+    width: 95%;
+    height: auto;
+    margin: 5px auto;
+}
+
+#closeGallery {
+    margin: 0 auto;
+}
+
+#profile-container{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 5px;
+  grid-template-areas: 
+    "profileHeader  profileHeader"
+    "profileGallery profileGallery"
+    "profilePic     biography"
+    "picUpload      biography"
+    "OWDetails      OWDetails"
+    "LoLDetails     LoLDetails"
+    "linkArea       linkArea"
+    "galleryPicDiv  galleryPicDiv";
+  }
+
+#myPics {
+    margin: 10px 0;
+    height: 130px; 
+    padding:10px; 
+    background-color:#000; 
+    border-radius:10px; 
+    border: 2px solid #FA5F02; 
+    overflow-y: scroll;
+}
+
+
+#myOtherPics {
+    margin: 10px 0;
+    height: 130px; 
+    padding:10px; 
+    background-color:#000; 
+    border-radius:10px; 
+    border: 2px solid #FA5F02; 
+    overflow-y: scroll;
+}
+
+#myOtherPics img {
+    max-height:80px;
+}
+
+#upload-pic {
+    background-color: #000; 
+    min-height: 30px; 
+    padding: 10px; 
+    text-align: left; 
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 2px solid #FA5F02;
+}
+
+#mainPicDiv {
+    border-radius: 10px;
+    border: 2px solid #FA5F02;
+    margin: 10px 0;
+}
+
+#mainPic {
+    border-radius: 10px;
+}
+
+#profile-header{  grid-area: profileHeader;}
+#upload-pic{      grid-area: picUpload}
+#myPics{          grid-area: profileGallery;}
+#mainPicDiv{      grid-area: profilePic;}
+#profile-details{ grid-area: biography;}
+#myOtherPics{      grid-area: linkArea;}
+#OWDetails{       grid-area: OWDetails;}
+#LoLDetails{         grid-area: LoLDetails;}
+#galleryPicDiv{     grid-area: galleryPicDiv;}
+
+@media only screen and (max-width:768px){
+  
+  #profile-container{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "profileHeader"
+    "profilePic"
+    "profileGallery"
+    "biography"
+    "picUpload"
+    "OWDetails"
+    "LoLDetails"
+    "linkArea"
+    "galleryPicDiv";
+}
+
